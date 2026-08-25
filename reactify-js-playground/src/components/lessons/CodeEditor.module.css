@@ -1,0 +1,105 @@
+.editor {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-code-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+}
+
+.dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+
+.dots i:nth-child(2) {
+  background: #febc2e;
+}
+
+.dots i:nth-child(3) {
+  background: #28c840;
+}
+
+.filename {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: rgba(233, 231, 255, 0.75);
+  cursor: text;
+}
+
+.hint {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: rgba(233, 231, 255, 0.45);
+}
+
+.surface {
+  display: flex;
+  /* Grows with the code, then hands scrolling over to the textarea. */
+  height: calc(var(--editor-rows, 10) * 1.36rem + 2 * var(--space-3));
+  max-height: 60vh;
+  overflow: hidden;
+}
+
+.gutter {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: var(--space-3) var(--space-2);
+  overflow: hidden;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(233, 231, 255, 0.3);
+  background: rgba(0, 0, 0, 0.18);
+  user-select: none;
+}
+
+.gutter span {
+  min-width: 1.6em;
+}
+
+.textarea {
+  flex: 1;
+  height: 100%;
+  padding: var(--space-3);
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  background: transparent;
+  color: var(--color-code-text);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  tab-size: 2;
+  white-space: pre;
+}
+
+.textarea::placeholder {
+  color: rgba(233, 231, 255, 0.35);
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.editor:focus-within {
+  border-color: var(--color-primary);
+}

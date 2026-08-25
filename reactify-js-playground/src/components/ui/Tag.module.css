@@ -1,0 +1,54 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.neutral {
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+}
+
+.brand {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.js {
+  background: var(--color-js-soft);
+  color: #a16207;
+}
+
+.react {
+  background: var(--color-react-soft);
+  color: #0e7490;
+}
+
+.success {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.danger {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.warning {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+}
+
+[data-theme='dark'] .js {
+  color: #facc15;
+}
+
+[data-theme='dark'] .react {
+  color: #67e8f9;
+}
